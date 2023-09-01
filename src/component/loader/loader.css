@@ -1,0 +1,42 @@
+.loaderMain{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+}
+
+.loader{
+    display: flex;
+    flex-direction: column;
+}
+
+.img{
+    animation: imganimate 1s infinite;
+}
+
+@keyframes imganimate {
+    0%{
+transform: rotate(0);
+    }
+   100%{
+transform: rotate(360deg);
+   }
+}
+
+.Line{
+    height: 7px;
+    background-color: #dc3545;
+    margin-top: 5px;
+    border-radius: 5px;
+    animation: wid 1s infinite;
+}
+
+@keyframes wid {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 105%;
+    }
+}

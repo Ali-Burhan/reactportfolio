@@ -1,0 +1,141 @@
+.homeMain{
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    transition: all 0.4s;
+}
+.homeMain2{
+    display: grid;
+    transition: all 0.6s;
+    grid-template-columns: 5% 1fr;
+    
+}
+
+.rightSide{
+    padding: 30px;
+
+}
+.mainDash{
+    background-image: url('../images/homeback.svg');
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+.leftSide{
+    padding: 30px;
+}
+.homePic{
+    border-radius: 30px;
+}
+.icon{
+position: absolute;
+top: 0;
+left: 50%;
+color: white;
+}
+
+.sideBar{position: relative;}
+
+@media screen and (700px <= width <=1200px) {
+    .homeMain2{
+        display: grid;
+        transition: all 1s;
+        grid-template-columns: 10% 1fr;
+    }
+}
+@media screen and (width <=700px) {
+    .sideLogo{
+        display: none;
+    }
+    .homeMain2{
+        display: grid;
+        transition: all 1s;
+        grid-template-columns: 10% 1fr;
+    }
+}
+@media screen and (width <=550px) {
+    .sideLogo{
+        display: none;
+    }
+    .homeMain2{
+        display: grid;
+        transition: all 1s;
+        grid-template-columns: 12% 1fr;
+    }
+}
+@media screen and (width <=450px) {
+    .sideLogo{
+        display: none;
+    }
+    .homeMain2{
+        display: grid;
+        transition: all 1s;
+        grid-template-columns: 12% 1fr;
+    }
+    .icon{
+        position: absolute;
+        top: 0;
+        left: 10%;
+        color: white;
+        }
+}
+
+
+@media screen and (650px <= width <=850px) {
+    .homeMain{
+        display: grid;
+        grid-template-columns: 20% 1fr;
+        transition: all 1s;
+    }
+}
+@media screen and (500px <= width <=650px) {
+    .homeMain{
+        display: grid;
+        grid-template-columns: 25% 1fr;
+        transition: all 1s;
+    }
+}
+@media screen and ( width <= 500px) {
+    .homeMain{
+        display: grid;
+        grid-template-columns: 45% 1fr;
+        transition: all 1s;
+    }
+}
+
+
+@media screen and (width <=1000px) {
+    .mainDash{
+        grid-template-columns: 1fr;
+    }
+    .rightSide{
+     color: white;
+    }
+}
+@media screen and (width <=500px) {
+    .rightSide{
+        color: white;
+    }
+    .homePic{
+        width: 60%;
+    }
+    .midSide{
+        margin-left: 10%;
+    }
+    .btnmob{
+        color: white;
+        border: 1px solid white;
+    }
+}
+
+.blink{
+    animation: blinking 0.7s infinite;
+}
+@keyframes blinking {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

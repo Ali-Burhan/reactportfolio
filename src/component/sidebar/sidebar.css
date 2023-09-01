@@ -1,0 +1,56 @@
+.SidebarMain{
+    display: flex;    
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    align-items: center;
+    background-color: #dc3545;
+    color: white;
+}
+
+.menuItems{
+    height: 70%;
+}
+.item{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.item2{
+    display: none;
+}
+
+.item::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    left: 10px;
+    width: 92%;
+}
+.footer2{display: none;}
+.item:hover::before{
+    background-color: white;
+    animation: wid 0.7s ease-out;
+}
+
+@keyframes wid {
+    0%{
+        width: 0%;
+    }
+
+    100%{
+width: 92%;
+    }
+}
+
+.Logo{
+    margin-top: 50px;
+}
+@media screen and (width <= 1100px) {
+    .egText{
+        display: none;
+    }
+}

@@ -1,0 +1,131 @@
+.loginMain{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.imgDiv{
+    width: 30%;
+    background-image: url('../images/login.png');
+}
+
+.formDiv{
+    width: 70%;
+    height: 100%;
+}
+
+.formDiv{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center ;
+}
+
+.piccss{
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+}
+
+.logo{
+margin-top: 5%;
+height: 20%;
+}
+
+.logo>h3{
+    margin-left: 15px;
+}
+
+.inputDiv{
+    display: flex;
+    border-radius: 3px;
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.inputDiv>input{
+    outline: none;
+    background: transparent;
+    border: none;
+    width: 95%;
+}
+.inputDiv>img{
+    width: 8%;
+}
+.inpSvg{
+    height: 25px;
+}
+.form{
+height: 60%;
+width: 40%;
+position: relative;
+}
+.buttonDiv{
+    width: 100%;
+}
+
+.buttonDiv:hover{
+    color: white;
+}
+
+.buttonDiv::before{
+    content: "";
+    height: 100%;
+    width: 95%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+}
+
+.buttonDiv:hover::before{
+    animation: wid 0.5s;
+    background-color: rgb(247, 63, 63);
+    
+}
+
+@keyframes wid {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 95%;
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (533px <= width <= 924px) {
+    .form{
+        height: 60%;
+        width: 70%;
+        position: relative;
+        }
+
+}
+@media screen and (0px <= width <= 533px) {
+    .form{
+        height: 60%;
+        width: 95%;
+        position: relative;
+        }
+        .imgDiv{
+            display: none;
+        }
+        .formDiv{
+            width: 100%;
+            height: 100%;
+        }
+
+}
+
+.carat{
+    caret-color: #dc3545;
+    color: #dc3545;
+    font-weight: 500;
+}

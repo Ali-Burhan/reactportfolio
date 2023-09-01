@@ -1,0 +1,135 @@
+.projectMain{
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/about.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.8fr;
+    place-items: center;
+    position: relative;
+    mix-blend-mode: darken;
+}
+.projectMain::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity here (0.5 for 50% darkness) */
+    z-index: -1; /* Place the overlay behind the content */
+    pointer-events: none; /* Allows interaction with the content underneath */
+  }
+.upperBox{
+    color: white;
+    text-align: center;
+}
+.upperBox > h1{
+    font-size: 50px;
+    background-image: linear-gradient(to right, #dc3545, white); /* Adjust the colors and direction as needed */
+    -webkit-background-clip: text; 
+    background-clip: text;
+    line-height: 50px;
+    color: transparent; /* Make the text transparent so the gradient shows through */
+    font-weight: bold; /* Set the font weight as needed */
+    letter-spacing: 23px;
+}
+.lowerBox{
+ background-color: rgba(255, 255, 255, 0.852);
+ width: 100%;
+ height: 100%;
+ display: grid;
+ grid-template-columns: 2fr 1fr 2fr;
+ place-items: center;
+}
+
+.aboutme{
+    padding: 50px;
+}
+
+.aboutme > h3{
+    background-image: linear-gradient(to right,#dc3545, #1500ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.aboutme > span {
+    color: #dc3545;
+    font-weight: bold;
+}
+.skillme{
+    width: 100%;
+    padding: 50px;
+    
+}
+
+.projectlinks{
+    cursor: pointer;
+    text-decoration: none;
+    color: #dc3545;
+    font-weight: bold;
+    transition: all 1s;
+    position: relative;
+}
+
+.projectlinks::before{
+    content: "";
+position: absolute;
+bottom: -2px;
+height: 2px;
+background-color: #dc3545;
+transition: all 1s;
+}
+
+.projectlinks:hover::before{
+    width: 100%;
+    animation: wid 1s ;
+}
+
+@keyframes wid {
+    0%{
+width: 0;
+    }
+    100%{
+width: 100%;
+    }
+}
+
+@media screen and (width <= 1100px) {
+    .aboutme{
+        padding: 20px;
+    }
+    .skillme{
+        width: 100%;
+        padding: 20px;   
+    }
+}
+@media screen and (width <= 900px) {
+    .aboutme{
+        padding: 5px;
+    }
+    .skillme{
+        width: 100%;
+        padding: 5px;   
+    }
+}
+@media screen and (width <= 800px) {
+.projectMain{
+    place-items: center;
+    height: 100%;
+}
+
+    .lowerBox{
+        display: none;
+    }
+
+}
+@media screen and (width <= 400px) {
+    .upperBox{
+        padding: 10px;
+    }
+}

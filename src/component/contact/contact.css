@@ -1,0 +1,144 @@
+.contactMain{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+    
+}
+
+.imageSide{
+    background-image: url('../images/contact.jpg');
+    height: 80%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.formSide{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+ }
+.forms{
+    width: 100%;
+}
+ .para{
+    padding: 12px;
+ }
+ .forms > .inputs > .contInput {
+
+     padding: 8px;
+     outline: none;
+     border: none;
+     caret-color: #dc3545;
+     color: #dc3545;
+     font-weight: 600;
+    }
+    .forms > .inputs{
+        position: relative;
+        margin-top: 23px;
+        border: 2px solid grey;
+        border-radius: 4px;
+ }
+ .forms > .inputs > .inputLabel{
+    position: absolute;
+    top: -19px;
+    color: #dc3545;
+    font-weight: bold;
+    background-color: white;
+    left: 10px;
+    font-size: 20px;
+ }
+
+ .socialicons{
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    /* margin: auto auto; */
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+ }
+ .svgIcon{
+    transition: all .5s;
+    border-radius: 6px;
+    cursor: pointer;
+ }
+.svgIcon:hover{
+background-color: #dc3545;
+color: white;
+}
+
+.toaster{
+    width: 100%;
+    background-color: #dc3545;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    transition: all 1s;
+    animation: popup 1s;
+}
+.toasterchild{
+    transition: all 1s;
+    animation: popup 1s;
+    content: "x";
+    color: white;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    cursor: pointer;
+}
+@keyframes popup {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (width <=1000px) {
+    .contactMain{
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+    .formSide{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+     }
+}
+@media screen and (width <= 600px) {
+    .contactMain{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .imageSide{
+        display: none;
+    }
+    .formSide{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+     }
+     .socialicons{
+        width: 100%;
+        margin-top: 10px;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+     }
+}
